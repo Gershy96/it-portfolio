@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Security Group Management Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Active Directory Security Group Management Lab</h1>
+
+<p>
+This lab demonstrates the administration of security groups within Active Directory Domain Services (AD DS). The exercise includes creating a departmental security group, assigning users to the group, moving an existing user to a different Organizational Unit (OU), updating group memberships, and verifying that access is managed according to departmental roles.
+</p>
+
+<h2>Environment</h2>
+
+<ul>
+    <li><strong>Hypervisor:</strong> VMware Workstation</li>
+    <li><strong>Server:</strong> Windows Server 2022</li>
+    <li><strong>Domain:</strong> corp.local</li>
+    <li><strong>Domain Controller:</strong> DC01</li>
+    <li><strong>Management Tool:</strong> Active Directory Users and Computers (ADUC)</li>
+</ul>
+
+<h2>Lab Objectives</h2>
+
+<ul>
+    <li>Create a departmental Security Group.</li>
+    <li>Add user accounts to the Security Group.</li>
+    <li>Move an existing user to a different Organizational Unit.</li>
+    <li>Update Security Group membership to reflect departmental changes.</li>
+    <li>Verify successful group membership.</li>
+</ul>
+
+<hr>
+
+<h2>Video Demonstration</h2>
+
+<p>
+The following demonstration shows the complete process of creating a Security Group, adding users, moving a user between Organizational Units, updating group memberships, and verifying the final configuration.
+</p>
+
+<iframe
+    width="800"
+    height="450"
+    src="https://www.youtube.com/embed/g3frsU7Yzpw"
+    title="Active Directory Security Group Management"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Step 1 – Create the Sales Security Group</h2>
+
+<p>
+A new Global Security Group named <strong>Sales_Users</strong> is created to manage permissions for users within the Sales department.
+</p>
+
+<img src="images/group-management-1-create-group.jpg" alt="Creating Sales Security Group">
+
+<p>
+The group creation wizard is completed and the new Security Group is successfully created.
+</p>
+
+<img src="images/group-management-2-group-created.jpg" alt="Sales Security Group Created">
+
+<hr>
+
+<h2>Step 2 – Add Members to the Security Group</h2>
+
+<p>
+Sales department users are added to the <strong>Sales_Users</strong> Security Group, allowing permissions to be managed through group membership rather than individual user accounts.
+</p>
+
+<img src="images/group-management-3-add-members.jpg" alt="Adding members to Sales Security Group">
+
+<p>
+The selected users are successfully added to the Security Group.
+</p>
+
+<img src="images/group-management-4-members-added.jpg" alt="Members added to Security Group">
+
+<hr>
+
+<h2>Step 3 – Move an Existing User to the Sales Department</h2>
+
+<p>
+An existing user account is moved from the Human Resources Organizational Unit to the Sales Organizational Unit to reflect a departmental change.
+</p>
+
+<img src="images/group-management-5-move-user.jpg" alt="Moving user from HR">
+
+<p>
+The user is successfully moved into the Sales Organizational Unit.
+</p>
+
+<img src="images/group-management-6-user-moved.jpg" alt="User moved to Sales OU">
+
+<hr>
+
+<h2>Step 4 – Update Security Group Membership</h2>
+
+<p>
+Because the user has changed departments, the account is removed from the previous department's Security Group before being assigned to the appropriate Sales Security Group.
+</p>
+
+<img src="images/group-management-7-remove-old-group.jpg" alt="Removing user from HR Security Group">
+
+<p>
+The user is then added to the <strong>Sales_Users</strong> Security Group.
+</p>
+
+<img src="images/group-management-8-add-sales-group.jpg" alt="Adding user to Sales Security Group">
+
+<hr>
+
+<h2>Step 5 – Verify Group Membership</h2>
+
+<p>
+The final Security Group membership is verified to confirm that all Sales users have been successfully assigned to the correct Security Group.
+</p>
+
+<img src="images/group-management-9-verify-membership.jpg" alt="Verify Security Group Membership">
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>Active Directory Administration</li>
+    <li>Security Group Management</li>
+    <li>User Account Administration</li>
+    <li>Organizational Unit Management</li>
+    <li>Identity and Access Management</li>
+    <li>Windows Server Administration</li>
+    <li>Active Directory Users and Computers (ADUC)</li>
+</ul>
+
+<h2>Technologies Used</h2>
+
+<ul>
+    <li>Windows Server 2022</li>
+    <li>Active Directory Domain Services (AD DS)</li>
+    <li>Active Directory Users and Computers (ADUC)</li>
+    <li>VMware Workstation</li>
+</ul>
+
+<h2>Outcome</h2>
+
+<p>
+This lab demonstrates practical administration of Active Directory Security Groups by creating departmental groups, assigning users, managing Organizational Unit changes, and maintaining accurate group memberships. Managing permissions through Security Groups instead of assigning permissions directly to individual users is a widely adopted best practice in enterprise Windows environments because it simplifies administration and improves scalability.
+</p>
+
+<p>
+<a href="active-directory-administration.html">← Back to Active Directory Administration</a>
+</p>
+
+</body>
+</html>

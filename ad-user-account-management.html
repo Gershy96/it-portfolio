@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory User Account Management Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Active Directory User Account Management Lab</h1>
+
+<p>
+This lab demonstrates the process of creating and configuring user accounts within Active Directory Domain Services (AD DS) using Windows Server 2022. User accounts were created within departmental Organizational Units (OUs), configured with appropriate password settings, and verified to ensure successful deployment in a domain environment.
+</p>
+
+<h2>Environment</h2>
+
+<ul>
+    <li><strong>Hypervisor:</strong> VMware Workstation</li>
+    <li><strong>Server:</strong> Windows Server 2022</li>
+    <li><strong>Client:</strong> Windows 10</li>
+    <li><strong>Domain:</strong> corp.local</li>
+    <li><strong>Domain Controller:</strong> DC01</li>
+    <li><strong>Management Tool:</strong> Active Directory Users and Computers (ADUC)</li>
+</ul>
+
+<h2>Lab Objectives</h2>
+
+<ul>
+    <li>Create Active Directory user accounts.</li>
+    <li>Configure account information and password settings.</li>
+    <li>Organize users within the correct Organizational Unit.</li>
+    <li>Verify successful account creation.</li>
+</ul>
+
+<hr>
+
+<h2>Video Demonstration</h2>
+
+<p>
+The following video demonstrates the complete process of creating user accounts within Active Directory Users and Computers, configuring password settings, and verifying successful account creation.
+</p>
+
+<iframe
+    width="800"
+    height="450"
+    src="https://www.youtube.com/embed/SEXec7_BUjo"
+    title="Active Directory User Account Management"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Step 1 – Open Active Directory Users and Computers</h2>
+
+<p>
+Launch the Active Directory Users and Computers management console (ADUC), the primary tool used to administer users, groups, computers, and Organizational Units within an Active Directory domain.
+</p>
+
+<img src="images/ad-user-1-aduc-opened.jpg" alt="Active Directory Users and Computers">
+
+<hr>
+
+<h2>Step 2 – Create a New User Account</h2>
+
+<p>
+Navigate to the appropriate Organizational Unit, right-click, and select <strong>New → User</strong> to begin the New Object - User wizard.
+</p>
+
+<img src="images/ad-user-2-create-user.jpg" alt="Creating a new Active Directory user">
+
+<hr>
+
+<h2>Step 3 – Enter User Information</h2>
+
+<p>
+Enter the user's details including their name, logon name, and User Principal Name (UPN). These values uniquely identify the account within the Active Directory domain.
+</p>
+
+<img src="images/ad-user-3-user-information.jpg" alt="Entering user information">
+
+<hr>
+
+<h2>Step 4 – Configure Password Settings</h2>
+
+<p>
+Assign an initial password and configure the required account options, such as requiring a password change at next logon or setting the password to never expire, depending on organizational policy.
+</p>
+
+<img src="images/ad-user-4-password-configuration.jpg" alt="Password configuration">
+
+<hr>
+
+<h2>Step 5 – Verify Successful User Creation</h2>
+
+<p>
+Complete the wizard and verify that the new account appears within the selected Organizational Unit, confirming that the user has been successfully created.
+</p>
+
+<img src="images/ad-user-5-user-created.jpg" alt="User successfully created">
+
+<hr>
+
+<h2>Step 6 – Completed Organizational Unit</h2>
+
+<p>
+The completed Organizational Unit now contains multiple user accounts, demonstrating successful deployment and organization of domain users within the Active Directory environment.
+</p>
+
+<img src="images/ad-user-6-users-in-ou.jpg" alt="Completed Organizational Unit">
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>Active Directory Administration</li>
+    <li>User Account Management</li>
+    <li>Organizational Unit Administration</li>
+    <li>Identity and Access Management</li>
+    <li>Windows Server Administration</li>
+    <li>Account Configuration</li>
+</ul>
+
+<h2>Technologies Used</h2>
+
+<ul>
+    <li>Windows Server 2022</li>
+    <li>Active Directory Domain Services (AD DS)</li>
+    <li>Active Directory Users and Computers (ADUC)</li>
+    <li>VMware Workstation</li>
+    <li>Windows 10</li>
+</ul>
+
+<h2>Outcome</h2>
+
+<p>
+This lab demonstrates practical experience creating and configuring user accounts within an Active Directory domain. These administrative tasks are fundamental responsibilities of IT Support Technicians and Systems Administrators in enterprise Windows environments.
+</p>
+
+<p><a href="active-directory-administration.html">← Back to Active Directory Administration</a></p>
+
+</body>
+</html>

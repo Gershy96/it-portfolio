@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMB Shares and NTFS Permissions Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>SMB Shares and NTFS Permissions Lab</h1>
+
+<p>
+This lab demonstrates creating a shared folder, configuring share and NTFS permissions, troubleshooting access issues, and verifying successful access for authorized users in an Active Directory environment.
+</p>
+
+<hr>
+
+<h2>Environment</h2>
+
+<ul>
+    <li>Windows Server 2022</li>
+    <li>Active Directory</li>
+    <li>Security Groups</li>
+    <li>SMB Shares</li>
+    <li>NTFS Permissions</li>
+</ul>
+
+<hr>
+
+<h2>Video 1 - Creating and Sharing the HR Folder</h2>
+
+<p>
+Created the HR folder and configured SMB sharing so that network users could access the resource.
+</p>
+
+<iframe width="100%" height="500"
+src="https://www.youtube.com/embed/y12aPKizbj0"
+title="Part 1 - Creating and Sharing the HR Folder"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Video 2 - Configuring NTFS Permissions</h2>
+
+<p>
+Configured file system permissions to ensure that only authorized users would have access to the folder.
+</p>
+
+<iframe width="100%" height="500"
+src="https://www.youtube.com/embed/UEhEYAEKpu0"
+title="Part 2 - Configuring NTFS Permissions"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Video 3 - Investigating Security Group Membership</h2>
+
+<p>
+Investigated group membership and verified that the affected user had not been added to the correct security group.
+</p>
+
+<iframe width="100%" height="500"
+src="https://youtube.com/embed/N0KGpoYbMZo"
+title="Part 3 - Investigating Security Group Membership"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Video 4 - Access Denied Verification</h2>
+
+<p>
+Verified that unauthorized users were prevented from accessing the HR share, demonstrating the effectiveness of the configured permissions.
+</p>
+
+<iframe width="100%" height="500"
+src="https://youtube.com/embed/DtLpRWj-Coo"
+title="Part 4 - Access Denied Verification"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Video 5 - Successful Access Verification</h2>
+
+<p>
+Confirmed that authorized users could successfully access the share and create files within the folder.
+</p>
+
+<iframe width="100%" height="500"
+src="https://youtube.com/embed/XwGBmvMVW8c"
+title="Part 5 - Successful Access Verification"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Root Cause</h2>
+
+<p>
+The issue was caused by incorrect security group membership. Because the user was not a member of the appropriate Active Directory group, access to the HR share was denied.
+</p>
+
+<hr>
+
+<h2>Solution</h2>
+
+<p>
+Verified group membership and corrected the permissions configuration, ensuring that authorized users had the appropriate access while unauthorized users remained restricted.
+</p>
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>SMB Shares</li>
+    <li>NTFS Permissions</li>
+    <li>Share Permissions</li>
+    <li>Active Directory Security Groups</li>
+    <li>File Security</li>
+    <li>Windows Administration</li>
+    <li>Access Control</li>
+    <li>Troubleshooting</li>
+    <li>Root Cause Analysis</li>
+</ul>
+
+</body>
+</html>

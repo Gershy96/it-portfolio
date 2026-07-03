@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Organizational Unit Management Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Active Directory Organizational Unit (OU) Management Lab</h1>
+
+<p>
+This lab demonstrates the creation and organization of Organizational Units (OUs) within Active Directory Domain Services (AD DS). Organizational Units provide a logical structure for grouping users, computers, and other directory objects, making administration, delegation, and the application of Group Policy more efficient in enterprise Windows environments.
+</p>
+
+<h2>Environment</h2>
+
+<ul>
+    <li><strong>Hypervisor:</strong> VMware Workstation</li>
+    <li><strong>Server:</strong> Windows Server 2022</li>
+    <li><strong>Domain:</strong> corp.local</li>
+    <li><strong>Domain Controller:</strong> DC01</li>
+    <li><strong>Management Tool:</strong> Active Directory Users and Computers (ADUC)</li>
+</ul>
+
+<h2>Lab Objectives</h2>
+
+<ul>
+    <li>Create a new Organizational Unit (OU).</li>
+    <li>Organize Active Directory resources by department.</li>
+    <li>Apply best practices by protecting the OU from accidental deletion.</li>
+    <li>Verify successful creation of the Organizational Unit.</li>
+</ul>
+
+<hr>
+
+<h2>Step 1 – Create a New Organizational Unit</h2>
+
+<p>
+From Active Directory Users and Computers, a new Organizational Unit named <strong>Sales</strong> is created to provide a dedicated container for department-specific users and resources.
+</p>
+
+<img src="images/ou-management-1-create-ou.jpg" alt="Creating a new Organizational Unit">
+
+<hr>
+
+<h2>Step 2 – Configure the Organizational Unit</h2>
+
+<p>
+The Sales Organizational Unit is configured with the option to <strong>Protect container from accidental deletion</strong>, which helps prevent administrators from unintentionally removing critical directory objects.
+</p>
+
+<img src="images/ou-management-2-new-ou.jpg" alt="Configuring the Sales Organizational Unit">
+
+<hr>
+
+<h2>Step 3 – Verify Organizational Unit Creation</h2>
+
+<p>
+The newly created Sales Organizational Unit appears within the Active Directory hierarchy, confirming that it has been successfully created and is ready to contain users, groups, and computers.
+</p>
+
+<img src="images/ou-management-3-ou-created.jpg" alt="Sales Organizational Unit successfully created">
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>Active Directory Administration</li>
+    <li>Organizational Unit (OU) Management</li>
+    <li>Windows Server Administration</li>
+    <li>Directory Structure Organization</li>
+    <li>Active Directory Users and Computers (ADUC)</li>
+</ul>
+
+<h2>Technologies Used</h2>
+
+<ul>
+    <li>Windows Server 2022</li>
+    <li>Active Directory Domain Services (AD DS)</li>
+    <li>Active Directory Users and Computers (ADUC)</li>
+    <li>VMware Workstation</li>
+</ul>
+
+<h2>Outcome</h2>
+
+<p>
+This lab demonstrates the ability to create and organize Organizational Units within an Active Directory domain. Proper OU design provides a structured directory hierarchy that simplifies administration, supports delegation of control, and enables efficient management of users, groups, computers, and Group Policy throughout an enterprise environment.
+</p>
+
+<p>
+<a href="active-directory-administration.html">← Back to Active Directory Administration</a>
+</p>
+
+</body>
+</html>

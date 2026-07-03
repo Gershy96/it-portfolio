@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Troubleshooting Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>DNS Troubleshooting Lab</h1>
+
+<p>
+This lab demonstrates diagnosing and resolving a DNS configuration issue that prevented a Windows client from joining the Active Directory domain <strong>corp.local</strong>.
+</p>
+
+<hr>
+
+<h2>Problem</h2>
+
+<p>
+While attempting to join the client workstation to the <strong>corp.local</strong> domain, Windows reported that the Active Directory Domain Controller could not be contacted.
+</p>
+
+<img src="images/dns-ts-1-domain-error.jpg" width="800">
+
+<hr>
+
+<h2>Investigation Step 1: Verify Network Configuration</h2>
+
+<p>
+I used the following command:
+</p>
+
+<pre>
+ipconfig /all
+</pre>
+
+<p>
+The output showed that the Ethernet adapter was disconnected.
+</p>
+
+<img src="images/dns-ts-2-media-disconnected.jpg" width="800">
+
+<hr>
+
+<h2>Investigation Step 2: Restore Connectivity</h2>
+
+<p>
+After restoring network connectivity, I ran <code>ipconfig /all</code> again.
+</p>
+
+<p>
+The workstation received a valid IP address, but I noticed that the DNS server was configured as <strong>8.8.8.8</strong>.
+</p>
+
+<img src="images/dns-ts-3-ipconfig-8.8.8.8.jpg" width="800">
+
+<hr>
+
+<h2>Investigation Step 3: Verify DHCP Configuration</h2>
+
+<p>
+I released and renewed the IP configuration.
+</p>
+
+<pre>
+ipconfig /release
+ipconfig /renew
+</pre>
+
+<p>
+The workstation successfully received a valid IP address and default gateway.
+</p>
+
+<img src="images/dns-ts-4-release-renew.jpg" width="800">
+
+<hr>
+
+<h2>Investigation Step 4: Test DNS Resolution</h2>
+
+<p>
+To verify name resolution, I used:
+</p>
+
+<pre>
+nslookup corp.local
+</pre>
+
+<p>
+The output showed that the workstation was using Google's public DNS server and could not resolve the internal Active Directory domain.
+</p>
+
+<img src="images/dns-ts-5-nslookup-failure.jpg" width="800">
+
+<hr>
+
+<h2>Root Cause</h2>
+
+<p>
+The client was configured to use Google's public DNS server (<strong>8.8.8.8</strong>) instead of the Domain Controller. Because Active Directory relies heavily on DNS, the client could not locate domain services.
+</p>
+
+<hr>
+
+<h2>Solution</h2>
+
+<p>
+I corrected the Preferred DNS Server and pointed the workstation to the Domain Controller.
+</p>
+
+<img src="images/dns-ts-7correct-dns-settings.jpg" width="800">
+
+<p>
+After making the change, I cleared the DNS cache and tested name resolution again.
+</p>
+
+<pre>
+ipconfig /flushdns
+nslookup corp.local
+</pre>
+
+<img src="images/dns-ts-6-flushdns-success.jpg" width="800">
+
+<hr>
+
+<h2>Verification</h2>
+
+<p>
+After correcting the DNS configuration, the workstation successfully joined the <strong>corp.local</strong> domain.
+</p>
+
+<img src="images/dns-ts-8-domain-join-success.jpg" width="800">
+
+<hr>
+
+<h2>Commands Used</h2>
+
+<pre>
+ipconfig /all
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
+nslookup corp.local
+</pre>
+
+<hr>
+<hr>
+
+<h2>Video Walkthrough</h2>
+
+<h3>Part 1 - Investigation</h3>
+
+<iframe width="100%" height="500"
+src="https://www.youtube.com/embed/i0WHGA3U1M4"
+title="DNS Troubleshooting Lab Part 1"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<br><br>
+
+<h3>Part 2 - Solution and Verification</h3>
+
+<iframe width="100%" height="500"
+src="https://www.youtube.com/embed/FuYXHwuB8Cs"
+title="DNS Troubleshooting Lab Part 2"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<hr>
+<h2>Skills Demonstrated</h2>
+
+<ul>
+<li>DNS Troubleshooting</li>
+<li>TCP/IP Fundamentals</li>
+<li>DHCP</li>
+<li>Active Directory</li>
+<li>Windows Administration</li>
+<li>Network Diagnostics</li>
+<li>Command-Line Tools</li>
+<li>Root Cause Analysis</li>
+<li>Problem Solving</li>
+</ul>
+
+</body>
+</html>
