@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Policy Drive Mapping Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Group Policy Drive Mapping Lab</h1>
+
+<p>
+This lab demonstrates how to use <strong>Group Policy Preferences</strong> to automatically map a network drive for users within a specific Organizational Unit (OU). Automating drive mapping ensures users receive the correct shared resources at logon without manually entering network paths, reducing Help Desk requests and improving the user experience.
+</p>
+
+<hr>
+
+<h2>Help Desk Ticket</h2>
+
+<p><strong>Ticket #1046</strong></p>
+
+<p><strong>Requester:</strong> HR Department</p>
+
+<p><strong>Issue:</strong></p>
+
+<p>
+Users in the HR department need the HR shared drive (<strong>\\SERVER\HR</strong>) to be automatically mapped every time they log in. Currently, users must manually map the drive each time, causing delays and unnecessary support requests.
+</p>
+
+<p><strong>Goal:</strong></p>
+
+<p>
+Configure Group Policy so the HR shared drive is automatically mapped whenever HR users sign in.
+</p>
+
+<p><strong>Scope:</strong></p>
+
+<ul>
+    <li>Apply only to users in the HR Organizational Unit.</li>
+    <li>Automatically map the HR shared drive at user logon.</li>
+    <li>Verify successful access after policy application.</li>
+</ul>
+
+<hr>
+
+<h2>Environment</h2>
+
+<ul>
+    <li>Windows Server 2022</li>
+    <li>Active Directory Domain Services</li>
+    <li>Group Policy Management</li>
+    <li>Windows 10 Client</li>
+    <li>HR Organizational Unit</li>
+    <li>Shared Folder: \\SERVER\HR</li>
+</ul>
+
+<hr>
+
+<h2>Problem</h2>
+
+<p>
+HR users were required to manually map the HR shared drive whenever they logged on. This created unnecessary Help Desk requests and slowed access to shared departmental resources.
+</p>
+
+<hr>
+
+<h2>Solution</h2>
+
+<p>
+A Group Policy Preference was configured using the <strong>Drive Maps</strong> extension within User Configuration. The policy maps the HR shared drive automatically during user logon and is linked specifically to the HR Organizational Unit, ensuring that only HR users receive the mapped drive.
+</p>
+
+<hr>
+
+<h2>Verification</h2>
+
+<p>
+After forcing a Group Policy update and signing in as an HR user, the following was verified:
+</p>
+
+<ul>
+    <li>The HR network drive appeared automatically in File Explorer.</li>
+    <li>No manual mapping was required.</li>
+    <li>The shared folder opened successfully.</li>
+    <li>The policy applied only to users within the HR Organizational Unit.</li>
+</ul>
+
+<hr>
+
+<h2>Commands Used</h2>
+
+<pre>gpupdate /force</pre>
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>Active Directory Administration</li>
+    <li>Group Policy Management</li>
+    <li>Group Policy Preferences</li>
+    <li>Drive Mapping</li>
+    <li>Organizational Unit Administration</li>
+    <li>Windows File Sharing</li>
+    <li>Help Desk Troubleshooting</li>
+    <li>Windows Server 2022 Administration</li>
+</ul>
+
+<hr>
+
+<h2>Video Demonstration</h2>
+
+<iframe width="800" height="450"
+src="https://www.youtube.com/embed/Qc4RHCwXpPg"
+title="Group Policy Drive Mapping Lab"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+<hr>
+
+<h2>Learning Outcome</h2>
+
+<p>
+This lab demonstrates how Group Policy Preferences can automate the delivery of network resources to users based on their Organizational Unit. Automating drive mapping improves consistency, reduces manual configuration, and minimizes Help Desk support requests while ensuring users always have access to the resources required for their role.
+</p>
+
+<p><a href="active-directory-administration.html">← Back to Active Directory Administration</a></p>
+
+<p>
+<a href="index.html">← Back to Home</a>
+</p>
+
+</body>
+</html>
