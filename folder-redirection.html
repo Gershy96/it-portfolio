@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Redirection Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Folder Redirection Lab</h1>
+
+<p>
+This lab demonstrates how to configure <strong>Folder Redirection</strong> through Group Policy in a Windows Server 2022 Active Directory environment. The configuration redirects a user's Documents folder from the local Windows client to a folder hosted on the domain server.
+</p>
+
+<hr>
+
+<h2>Objective</h2>
+
+<p>
+Configure a Group Policy Object to redirect the Documents folder for domain users to a server-based location, then verify that the redirection is working from the Windows client.
+</p>
+
+<hr>
+
+<h2>Environment</h2>
+
+<ul>
+    <li>Windows Server 2022</li>
+    <li>Active Directory Domain Services</li>
+    <li>Domain: <strong>corp.local</strong></li>
+    <li>Domain Controller: <strong>DC01</strong></li>
+    <li>Windows client joined to the domain</li>
+    <li>Group Policy Management</li>
+    <li>Redirected folder location: <strong>\\DC01\RedirectedFolders</strong></li>
+</ul>
+
+<hr>
+
+<h2>Configuration</h2>
+
+<p>
+Folder Redirection was configured through Group Policy. The user's Documents folder was redirected to a server-side location so that the data is stored on the Windows Server rather than only on the local workstation.
+</p>
+
+<p>
+The policy was applied to the appropriate domain user and tested from the Windows client.
+</p>
+
+<hr>
+
+<h2>Verification</h2>
+
+<p>
+After applying the Group Policy configuration, I signed in as the test domain user and verified that the Documents folder was redirected successfully.
+</p>
+
+<ul>
+    <li>The Documents folder displayed the redirected network location.</li>
+    <li>The redirected path was <strong>\\DC01\RedirectedFolders\sjohnson</strong>.</li>
+    <li>A test file was created in the redirected Documents folder.</li>
+    <li>The corresponding user folder was visible on DC01.</li>
+</ul>
+
+<hr>
+
+<h2>Video Demonstration</h2>
+
+<p>
+The video below shows the Folder Redirection configuration and verification performed in the Windows Server lab.
+</p>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/DNOH4FePqv8"
+    title="Folder Redirection Lab | Windows Server"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+</div>
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>Group Policy Management</li>
+    <li>Folder Redirection</li>
+    <li>Active Directory Administration</li>
+    <li>Windows Server 2022 Administration</li>
+    <li>Windows Client Administration</li>
+    <li>Network File Paths</li>
+    <li>Policy Verification and Troubleshooting</li>
+</ul>
+
+<hr>
+
+<h2>Key Takeaway</h2>
+
+<p>
+This lab demonstrates the practical use of Group Policy to centrally manage user folder locations. Folder Redirection can keep user data on a server-based location, making it easier to manage and access within a Windows domain environment.
+</p>
+
+<p><a href="active-directory-administration.html">← Back to Active Directory Administration</a></p>
+
+<p><a href="index.html">← Back to Home</a></p>
+
+</body>
+</html>
