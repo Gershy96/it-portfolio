@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Integration - Gershy's IT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Active Directory Integration</h1>
+
+<p>
+    This lab demonstrates integrating an Ubuntu Server with a Windows
+    Active Directory environment, allowing the Linux server to discover
+    the domain and authenticate using Active Directory accounts.
+</p>
+
+<hr>
+
+<h2>Lab Objective</h2>
+
+<p>
+    Join the Ubuntu server to the <code>corp.local</code> Active Directory
+    domain and configure the required services for domain discovery,
+    identity management, and authentication.
+</p>
+
+<h2>Environment</h2>
+
+<ul>
+    <li>Ubuntu Server — IT-SRV01</li>
+    <li>Windows Server 2022 — DC01</li>
+    <li>Active Directory domain — <code>corp.local</code></li>
+    <li>Domain Controller IP — <code>192.168.255.10</code></li>
+    <li>Virtualization — VMware Workstation</li>
+</ul>
+
+<h2>Implementation Process</h2>
+
+<ul>
+    <li>Configured the Ubuntu server for Active Directory integration.</li>
+    <li>Installed and configured the required AD integration packages.</li>
+    <li>Joined IT-SRV01 to the <code>corp.local</code> domain.</li>
+    <li>Verified successful domain membership using <code>realm</code>.</li>
+    <li>Configured and verified SSSD for domain identity management.</li>
+    <li>Tested Active Directory user account resolution.</li>
+    <li>Verified authentication using an Active Directory account.</li>
+</ul>
+
+<h2>Evidence</h2>
+
+<p>
+    The video below demonstrates the Active Directory integration process,
+    including joining IT-SRV01 to the domain and verifying successful
+    domain authentication.
+</p>
+
+<p>
+    <a href="https://youtu.be/URimODGeGBw" target="_blank">
+        Watch Active Directory Integration Video →
+    </a>
+</p>
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>Linux Active Directory integration</li>
+    <li>Active Directory domain joining</li>
+    <li>SSSD configuration</li>
+    <li>Kerberos authentication</li>
+    <li>Domain user authentication</li>
+    <li>Linux command-line administration</li>
+    <li>Ubuntu Server administration</li>
+    <li>VMware Workstation</li>
+</ul>
+
+<hr>
+
+<p>
+    <a href="linux-server-labs.html">← Back to Linux Server Labs</a>
+</p>
+
+</body>
+</html>
