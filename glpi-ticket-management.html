@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A practical IT Support case study demonstrating GLPI ticket management, asset inventory, remote support and HR shared-drive troubleshooting.">
+    <title>GLPI Ticket Management | Gershy's IT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>GLPI Ticket Management &amp; Incident Resolution</h1>
+
+<p>
+    <a href="it-support-labs.html">IT Support &amp; Service Desk</a> |
+    <a href="index.html">Home</a>
+</p>
+
+<hr>
+
+<h2>Project Overview</h2>
+
+<p>
+    This project demonstrates a simulated Level 1 IT Support workflow
+    using GLPI in a virtual corporate environment. The exercise involved
+    managing an HR shared-drive incident, documenting the support process
+    and restoring access to the affected resource.
+</p>
+
+<p>
+    The project combines ticket management, asset inventory, Active
+    Directory, Windows workstation support and structured troubleshooting.
+</p>
+
+<h2>Project Objectives</h2>
+
+<ul>
+    <li>Manage and document support incidents using GLPI.</li>
+    <li>Maintain an inventory of end-user computers.</li>
+    <li>Investigate an HR shared-drive access problem.</li>
+    <li>Apply corrective action and verify the result.</li>
+    <li>Document the outcome and close the ticket.</li>
+</ul>
+
+<hr>
+
+<h2>Lab Environment</h2>
+
+<p>
+    The environment was built using VMware Workstation and contains
+    Windows and Linux virtual machines configured for a simulated
+    corporate network.
+</p>
+
+<div class="project-image">
+    <img src="images/1-Overall-lab-environment.png"
+         alt="VMware Workstation showing the virtual IT lab environment">
+    <p>
+        <strong>Figure 1: Virtual Lab Environment</strong><br>
+        The VMware environment contains the domain controller, GLPI
+        server, technician workstation and Windows client computers.
+    </p>
+</div>
+
+<div class="project-image">
+    <img src="images/2-Active-Directory.png"
+         alt="Active Directory Users and Computers showing the corp.local domain">
+    <p>
+        <strong>Figure 2: Active Directory Structure</strong><br>
+        The corp.local domain provides centralized directory services
+        for the simulated corporate environment.
+    </p>
+</div>
+
+<h3>Core Systems</h3>
+
+<ul>
+    <li><strong>DC01:</strong> Windows Server 2022 — Active Directory and DNS.</li>
+    <li><strong>IT-SRV01:</strong> Ubuntu Server 24.04 — GLPI 11.0.11.</li>
+    <li><strong>IT-WS01:</strong> Ubuntu technician workstation.</li>
+    <li><strong>WIN10-CLIENT:</strong> Windows 10 Pro workstation.</li>
+    <li><strong>WIN10-CLIENT2:</strong> Windows 10 Pro workstation.</li>
+    <li><strong>Domain:</strong> corp.local.</li>
+    <li><strong>Virtualization:</strong> VMware Workstation.</li>
+</ul>
+
+<hr>
+
+<h2>GLPI Configuration &amp; Asset Inventory</h2>
+
+<p>
+    GLPI serves as the central ticketing and asset management platform
+    in this lab. The following evidence shows the application, configured
+    users and inventoried Windows workstations.
+</p>
+
+<div class="project-image">
+    <img src="images/3-GLPI-Dashboard.png"
+         alt="GLPI dashboard showing asset management features">
+    <p>
+        <strong>Figure 3: GLPI Dashboard</strong><br>
+        The main interface provides access to asset management,
+        administration and support functions.
+    </p>
+</div>
+
+<div class="project-image">
+    <img src="images/4-GLPI-Users.png"
+         alt="GLPI user administration page">
+    <p>
+        <strong>Figure 4: User Administration</strong><br>
+        User records configured in GLPI for the simulated support environment.
+    </p>
+</div>
+
+<div class="project-image">
+    <img src="images/5-GLPI-Computer-Inventory.png"
+         alt="GLPI computer inventory listing Windows client assets">
+    <p>
+        <strong>Figure 5: Computer Inventory</strong><br>
+        Both Windows client workstations appear in the GLPI asset inventory.
+    </p>
+</div>
+
+<div class="project-image">
+    <img src="images/6-WIN10-CLIENT-JLEE.png"
+         alt="GLPI asset details for WIN10-CLIENT">
+    <p>
+        <strong>Figure 6: WIN10-CLIENT Asset Record</strong><br>
+        An individual Windows workstation record can be inspected
+        in GLPI to review its inventory information.
+    </p>
+</div>
+
+<div class="project-image">
+    <img src="images/7-WIN10-CLIENT2-SJohnson.png"
+         alt="GLPI asset details for WIN10-CLIENT2">
+    <p>
+        <strong>Figure 7: WIN10-CLIENT2 Asset Record</strong><br>
+        The workstation associated with the troubleshooting exercise
+        is recorded in the inventory.
+    </p>
+</div>
+
+<div class="project-image">
+    <img src="images/8-GLPI-AGENT-Running.png"
+         alt="Windows Services console showing the GLPI Agent running">
+    <p>
+        <strong>Figure 8: GLPI Agent Service</strong><br>
+        The GLPI Agent is running on the Windows client to support
+        inventory collection.
+    </p>
+</div>
+
+<hr>
+
+<h2>Demonstration 1: Ticket Creation</h2>
+
+<p>
+    This demonstration shows the ticket-creation workflow in GLPI.
+    Recording an incident allows the reported issue to be tracked
+    and provides a record for investigation and resolution.
+</p>
+
+<div class="video-container">
+    <iframe
+        src="https://www.youtube-nocookie.com/embed/Bbq4-16V2QM"
+        title="GLPI Ticket Creation Demonstration"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<hr>
+
+<h2>Demonstration 2: Troubleshooting &amp; Resolution</h2>
+
+<p>
+    This demonstration follows an HR shared-drive incident through
+    investigation and corrective action. The objective was to determine
+    why the mapped drive was not appearing, correct the identified
+    problem and verify that the drive became available.
+</p>
+
+<div class="video-container">
+    <iframe
+        src="https://www.youtube-nocookie.com/embed/HWy5wRNyZ4g"
+        title="HR Shared Drive Troubleshooting and Resolution"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<hr>
+
+<h2>Support Workflow</h2>
+
+<ol>
+    <li>
+        <strong>Record:</strong>
+        Create the incident in GLPI with the relevant user and issue details.
+    </li>
+    <li>
+        <strong>Investigate:</strong>
+        Examine the reported symptoms and relevant configuration.
+    </li>
+    <li>
+        <strong>Identify:</strong>
+        Determine the cause using the troubleshooting evidence.
+    </li>
+    <li>
+        <strong>Resolve:</strong>
+        Apply the appropriate corrective action.
+    </li>
+    <li>
+        <strong>Verify:</strong>
+        Confirm that the shared drive is accessible.
+    </li>
+    <li>
+        <strong>Document:</strong>
+        Record the outcome and close the ticket.
+    </li>
+</ol>
+
+<hr>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+    <li>GLPI incident and ticket management.</li>
+    <li>IT asset inventory and documentation.</li>
+    <li>Windows workstation troubleshooting.</li>
+    <li>Active Directory and corporate domain awareness.</li>
+    <li>Shared-drive troubleshooting.</li>
+    <li>Remote support using Remmina.</li>
+    <li>Resolution verification and ticket closure.</li>
+</ul>
+
+<h2>Project Outcome</h2>
+
+<p>
+    This project demonstrates a ticket-driven support workflow,
+    from recording the reported problem through investigation,
+    corrective action and verification. It highlights the importance
+    of structured troubleshooting, maintaining accurate records
+    and confirming that a solution works before closing an incident.
+</p>
+
+<hr>
+
+<p>
+    <a href="it-support-labs.html">Back to IT Support &amp; Service Desk</a> |
+    <a href="index.html">Return to Home</a>
+</p>
+
+</body>
+</html>
