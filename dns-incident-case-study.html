@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Incident Case Study | IT Support Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .incident-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .incident-page h1,
+        .incident-page h2 {
+            color: #4fc3ff;
+        }
+
+        .incident-page h1 {
+            font-size: 2rem;
+        }
+
+        .incident-page h2 {
+            margin-top: 35px;
+        }
+
+        .incident-page p,
+        .incident-page li {
+            line-height: 1.8;
+        }
+
+        .incident-page .video-section {
+            margin: 35px 0;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #444;
+        }
+
+        .incident-page .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin-top: 15px;
+            background: #000;
+        }
+
+        .incident-page .video-container iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .incident-page .incident-details {
+            background: #292929;
+            border-left: 4px solid #4fc3ff;
+            padding: 18px 22px;
+            margin: 25px 0;
+        }
+
+        .incident-page .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #4fc3ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="incident-page">
+
+    <h1>DNS Troubleshooting & Incident Resolution</h1>
+
+    <p>
+        This case study demonstrates an end-to-end Level 1 IT Support
+        incident, from identifying a user's connectivity problem to
+        diagnosing the DNS misconfiguration, restoring access, documenting
+        the fix and closing the support ticket.
+    </p>
+
+    <div class="incident-details">
+        <h2>Incident Overview</h2>
+        <p><strong>Incident type:</strong> DNS resolution failure</p>
+        <p><strong>Affected workstation:</strong> WIN10-CLIENT2</p>
+        <p><strong>End user:</strong> Sarah Johnson (sjohnson)</p>
+        <p><strong>Technician workstation:</strong> IT-WS01 (Ubuntu)</p>
+        <p><strong>Remote support tool:</strong> Remmina (RDP)</p>
+        <p><strong>Ticketing system:</strong> GLPI</p>
+        <p><strong>Root cause:</strong> Incorrect DNS server address configured as 192.0.2.1.</p>
+        <p><strong>Correct DNS server:</strong> DC01 — 192.168.255.10</p>
+        <p><strong>Outcome:</strong> DNS resolution and website access restored; resolution documented and ticket closed.</p>
+    </div>
+
+    <h2>Incident Walkthrough</h2>
+
+    <p>
+        The four videos below document the incident in sequence. Each
+        demonstrates a different stage of the technician's workflow.
+    </p>
+
+    <section class="video-section">
+        <h2>Part 1 — Incident Demonstration</h2>
+        <p>
+            Demonstrates the user's connectivity problem and establishes
+            the symptoms that need to be investigated.
+        </p>
+
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/9_1gdILY1f0"
+                title="Part 1 - DNS Incident Demonstration | L1 IT Support Lab"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>Part 2 — Remote Support Workflow</h2>
+        <p>
+            Shows the technician using the Ubuntu workstation and Remmina
+            to connect remotely to the affected Windows workstation.
+        </p>
+
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/ch1deWIUmp0"
+                title="Part 2 - Remote Support with Remmina | L1 IT Support Lab"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>Part 3 — DNS Troubleshooting & Resolution</h2>
+        <p>
+            Demonstrates the diagnostic checks, identification of the
+            incorrect DNS address, consultation of the IT network
+            reference document, configuration correction and successful
+            verification.
+        </p>
+
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/tITXJoBUe4M"
+                title="Part 3 - DNS Troubleshooting and Resolution | L1 IT Support Lab"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>Part 4 — Incident Documentation & Ticket Closure</h2>
+        <p>
+            Shows the final stage of the incident: documenting the
+            corrective action and closing the GLPI support ticket.
+        </p>
+
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/I-iP6Lcq1sg"
+                title="Part 4 - Incident Documentation and Ticket Closure | GLPI Help Desk Lab"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <h2>Resolution Summary</h2>
+
+    <ol>
+        <li>Identified the user's DNS resolution failure.</li>
+        <li>Connected remotely to WIN10-CLIENT2 using Remmina.</li>
+        <li>Investigated connectivity and DNS lookup failures.</li>
+        <li>Consulted the IT network reference document to confirm the correct DNS server.</li>
+        <li>Replaced the incorrect DNS address with 192.168.255.10.</li>
+        <li>Verified successful DNS resolution and website access.</li>
+        <li>Documented the resolution and closed the GLPI ticket.</li>
+    </ol>
+
+    <h2>Skills Demonstrated</h2>
+
+    <ul>
+        <li>Level 1 IT Support and incident handling</li>
+        <li>Remote desktop support using Remmina and RDP</li>
+        <li>DNS and network troubleshooting</li>
+        <li>Windows network configuration</li>
+        <li>Technical documentation and IT reference procedures</li>
+        <li>GLPI ticket management and incident closure</li>
+        <li>Verification of corrective actions</li>
+    </ul>
+
+    <hr>
+
+    <a class="back-link" href="it-support-labs.html">
+        &larr; Back to IT Support Labs
+    </a>
+
+</main>
+
+</body>
+</html>
